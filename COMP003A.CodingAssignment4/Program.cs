@@ -38,6 +38,22 @@ namespace COMP003A.CodingAssignment4
                         productQuantities.Add(productQuantity);
                         Console.WriteLine("Product added successfully!");
                         break;
+                    case 2:
+                        Console.Write("Please Enter product name to update: ");
+                        string nameUpdated = Console.ReadLine();
+                        int index = productNames.IndexOf(nameUpdated);
+                        if (index != -1)
+                        {
+                            Console.Write("Enter new quantity: ");
+                            int newQuantity = int.Parse(Console.ReadLine());
+                            productQuantities[index] = newQuantity;
+                            Console.WriteLine("Product quantity updated successfully!");
+                        }
+                        else
+                        {
+                            Console.WriteLine("Invalid input. Please try again");
+                        }
+                        break;
                 }
             }
         }
