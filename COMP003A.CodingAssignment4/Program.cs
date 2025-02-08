@@ -29,9 +29,9 @@ namespace COMP003A.CodingAssignment4
                 switch (choice)
                 {
                     case 1:
-                        Console.Write("Please Enter product name: ");
+                        Console.Write("\nPlease Enter product name: ");
                         string productName = Console.ReadLine();
-                        Console.Write("Now Please Enter product quantity: ");
+                        Console.Write("Please Enter product quantity: ");
                         int productQuantity = int.Parse(Console.ReadLine());
 
                         productNames.Add(productName);
@@ -65,6 +65,10 @@ namespace COMP003A.CodingAssignment4
                         Console.WriteLine($"Total Products: {productNames.Count}");
                         Console.WriteLine($"Total Quantity: {totalQuantity}");
                         Console.WriteLine($"Average Quantity: {(productNames.Count > 0 ? (totalQuantity / productNames.Count) : 0)}");
+                        break;
+                    case 4:
+                        Console.WriteLine("Goodbye.");
+                        return;
                         break;
                 }
             }
