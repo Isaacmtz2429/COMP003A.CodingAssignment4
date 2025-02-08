@@ -54,6 +54,18 @@ namespace COMP003A.CodingAssignment4
                             Console.WriteLine("Invalid input. Please try again");
                         }
                         break;
+                    case 3:
+                        Console.WriteLine("Inventory Summary:");
+                        int totalQuantity = 0;
+                        for (int i = 0; i < productNames.Count; i++)
+                        {
+                            Console.WriteLine($" {productNames[i]}: {productQuantities[i]}");
+                            totalQuantity += productQuantities[i];
+                        }
+                        Console.WriteLine($"Total Products: {productNames.Count}");
+                        Console.WriteLine($"Total Quantity: {totalQuantity}");
+                        Console.WriteLine($"Average Quantity: {(productNames.Count > 0 ? (totalQuantity / productNames.Count) : 0)}");
+                        break;
                 }
             }
         }
